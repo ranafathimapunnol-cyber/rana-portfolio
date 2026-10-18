@@ -1,7 +1,8 @@
+
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowUpRight, Mail, MapPin } from "lucide-react";
+import { ArrowUpRight, Mail, MapPin, Phone } from "lucide-react";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 
 export default function Contact() {
@@ -13,6 +14,7 @@ export default function Contact() {
       <div className="pointer-events-none absolute left-1/2 top-20 h-80 w-80 -translate-x-1/2 rounded-full bg-white/50 blur-3xl" />
 
       <div className="relative mx-auto max-w-7xl">
+        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -36,7 +38,9 @@ export default function Contact() {
           </p>
         </motion.div>
 
-        <div className="mt-16 grid gap-4 md:grid-cols-2">
+        {/* Contact Cards */}
+        <div className="mt-16 grid gap-4 md:grid-cols-3">
+          {/* Email */}
           <motion.a
             href="mailto:ranafathimapunnol@gmail.com"
             initial={{ opacity: 0, y: 25 }}
@@ -61,16 +65,52 @@ export default function Contact() {
               Email
             </p>
 
-            <p className="mt-2 break-all text-lg tracking-[-0.02em] text-black/75">
+            <p className="mt-2 break-all text-base tracking-[-0.02em] text-black/75">
               ranafathimapunnol@gmail.com
             </p>
           </motion.a>
 
-          <motion.div
+          {/* Phone */}
+          <motion.a
+            href="tel:+919744764196"
+            aria-label="Call +91 97447 64196"
             initial={{ opacity: 0, y: 25 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.15 }}
+            className="group rounded-3xl border border-black/10 bg-white/35 p-7 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:bg-white/55 hover:shadow-lg"
+          >
+            <div className="flex items-start justify-between">
+              <div className="flex h-11 w-11 items-center justify-center rounded-full border border-black/10 bg-white/40">
+                <Phone size={18} strokeWidth={1.5} />
+              </div>
+
+              <ArrowUpRight
+                size={19}
+                strokeWidth={1.4}
+                className="text-black/35 transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-black"
+              />
+            </div>
+
+            <p className="mt-10 text-xs uppercase tracking-[0.15em] text-black/35">
+              Phone
+            </p>
+
+            <p className="mt-2 text-lg tracking-[-0.02em] text-black/75">
+              +91 97447 64196
+            </p>
+
+            <p className="mt-2 text-sm text-black/40">
+              Let&apos;s connect
+            </p>
+          </motion.a>
+
+          {/* Location */}
+          <motion.div
+            initial={{ opacity: 0, y: 25 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
             className="rounded-3xl border border-black/10 bg-white/35 p-7 backdrop-blur-md"
           >
             <div className="flex h-11 w-11 items-center justify-center rounded-full border border-black/10 bg-white/40">
@@ -87,11 +127,12 @@ export default function Contact() {
           </motion.div>
         </div>
 
+        {/* Social Links */}
         <motion.div
           initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          transition={{ duration: 0.6, delay: 0.25 }}
           className="mt-4 flex flex-col gap-5 rounded-3xl border border-black/10 bg-white/25 p-6 backdrop-blur-md sm:flex-row sm:items-center sm:justify-between"
         >
           <div>
@@ -133,11 +174,12 @@ export default function Contact() {
           </div>
         </motion.div>
 
+        {/* Closing CTA */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.25 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
           className="mt-20 flex flex-col gap-6 border-t border-black/10 pt-10 md:flex-row md:items-end md:justify-between"
         >
           <p className="max-w-2xl text-3xl leading-tight tracking-[-0.045em] md:text-4xl">

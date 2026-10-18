@@ -1,3 +1,4 @@
+
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
@@ -7,6 +8,7 @@ import { useState } from "react";
 const links = [
   { label: "Work", href: "#work" },
   { label: "Experience", href: "#experience" },
+  { label: "Education", href: "#education" },
   { label: "About", href: "#about" },
   { label: "Stack", href: "#stack" },
   { label: "Contact", href: "#contact" },

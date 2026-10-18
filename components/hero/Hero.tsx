@@ -135,7 +135,7 @@ export default function Hero() {
           {/* View Work */}
           <a
             href="#work"
-            className="group inline-flex items-center gap-2 rounded-full bg-[#171512] px-6 py-3 text-sm font-medium text-[#f2eee8] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+            className="group inline-flex items-center gap-2 rounded-full bg-[#dad7d2] px-6 py-3 text-sm font-medium text-[#f2eee8] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
           >
             View my work
 
